@@ -3,8 +3,8 @@
 	Donate link: https://www.pickplugins.com/item/pricing-table/?ref=wordpress.org
 	Tags:  free pricing table, price table, pricing table, pricing table plugin, pricing tables, wordpress pricing table, pricing, pricing plugin, pricing grid, price grid
 	Requires at least: 3.8
-	Tested up to: 6.6
-	Stable tag: 1.12.9
+	Tested up to: 6.7
+	Stable tag: 1.12.10
 	License: GPLv2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -112,6 +112,9 @@ to display videos on column simplay insert video url as following:
 
 
 == Changelog ==
+
+	= 1.12.10 =
+    * 2025-2-18 - fix - escaped issue fixed
 
 	= 1.12.9 =
     * 2021-05-19 - fix - HTML output issue fixed.

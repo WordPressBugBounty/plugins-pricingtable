@@ -5,63 +5,60 @@
 * Copyright: 	2015 pickplugins
 */
 
-if ( ! defined('ABSPATH')) exit;  // if direct access	
+if (! defined('ABSPATH')) exit;  // if direct access	
 
 
-if($mobile_enable_slider=='yes'):
+if ($mobile_enable_slider == 'yes'):
 ?>
 
-<script>
+    <script>
+        jQuery(document).ready(function($) {
 
-jQuery(document).ready(function($){
-
-    <?php
-
-
-    wp_enqueue_style( 'owl.carousel' );
-    wp_enqueue_script( 'owl.carousel' );
+            <?php
 
 
-        ?>
-        if(window.innerWidth < 576) {
-
-            $('.pricingtable-<?php echo $post_id; ?>').addClass('owl-carousel');
+            wp_enqueue_style('owl.carousel');
+            wp_enqueue_script('owl.carousel');
 
 
+            ?>
+            if (window.innerWidth < 576) {
 
-            $(".pricingtable-<?php echo $post_id; ?>").owlCarousel({
-
-                items : 1,
-                navText : ["",""],
-                autoplay: false,
-                loop: false,
-                autoHeight : true,
-                nav : true,
-                dots : true,
-            })
-
-        }
-        <?php
-
-
-    ?>
+                $('.pricingtable-<?php echo esc_attr($post_id); ?>').addClass('owl-carousel');
 
 
 
-})
+                $(".pricingtable-<?php echo esc_attr($post_id); ?>").owlCarousel({
 
+                    items: 1,
+                    navText: ["", ""],
+                    autoplay: false,
+                    loop: false,
+                    autoHeight: true,
+                    nav: true,
+                    dots: true,
+                })
+
+            }
+            <?php
+
+
+            ?>
+
+
+
+        })
     </script>
 
 
-<style type="text/css">
-    @media (max-width: 576px){
-        .pricingtable .column{
-            width: 90% !important;
+    <style type="text/css">
+        @media (max-width: 576px) {
+            .pricingtable .column {
+                width: 90% !important;
+            }
+
         }
-
-    }
-
-</style>
+    </style>
 
 
 <?php
