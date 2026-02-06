@@ -44,9 +44,9 @@ class class_pricingtable_shortcode{
 		if ( $wp_query->have_posts() ) :
 			while ( $wp_query->have_posts() ) : $wp_query->the_post();
 
-				echo get_the_title();
+				echo esc_html(get_the_title());
 				echo '<br/>';
-				echo do_shortcode('[pricingtable id="'.get_the_id().'"]');
+				echo do_shortcode('[pricingtable id="'.esc_attr(get_the_id()).'"]');
 				//echo '[pricingtable id="'.get_the_id().'"]';
 
 				echo '<br/><br/>';

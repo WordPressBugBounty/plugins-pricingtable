@@ -14,8 +14,8 @@ add_filter( 'manage_pricingtable_posts_columns' , 'pricingtable_add_shortcode_co
 function pricingtable_posts_shortcode_display( $column, $post_id ) {
     if ($column == 'shortcode'){
 		?>
-        <input style="background:#bfefff" type="text" onClick="this.select();" value="[pricingtable <?php echo 'id=&quot;'.$post_id.'&quot;';?>]" /><br />
-      <textarea cols="50" rows="1" style="background:#bfefff" onClick="this.select();" ><?php echo '<?php echo do_shortcode("[pricingtable id='; echo "'".$post_id."']"; echo '"); ?>'; ?></textarea>
+        <input style="background:#bfefff" type="text" onClick="this.select();" value="[pricingtable <?php echo 'id=&quot;'.esc_attr($post_id).'&quot;';?>]" /><br />
+      <textarea cols="50" rows="1" style="background:#bfefff" onClick="this.select();" ><?php echo '<?php echo do_shortcode("[pricingtable id='; echo "'".esc_attr($post_id)."']"; echo '"); ?>'; ?></textarea>
         <?php		
 		
     }

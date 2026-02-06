@@ -41,6 +41,7 @@ class class_post_meta_pricingtable{
 
         $_settings_tabs[] = array(
             'id' => 'shortcode',
+    /* translators: Icon HTML */
             'title' => sprintf(__('%s Shortcode','pricingtable'),'<i class="fas fa-laptop-code"></i>'),
             'priority' => 1,
             'active' => false,
@@ -48,6 +49,7 @@ class class_post_meta_pricingtable{
 
         $_settings_tabs[] = array(
             'id' => 'table_data',
+/* translators: Icon HTML */
             'title' => sprintf(__('%s Table Data','pricingtable'),'<i class="fas fa-border-all"></i>'),
             'priority' => 2,
             'active' => true,
@@ -56,6 +58,7 @@ class class_post_meta_pricingtable{
 
         $_settings_tabs[] = array(
             'id' => 'style',
+/* translators: Icon HTML */
             'title' => sprintf(__('%s Style','pricingtable'),'<i class="fa fa-magic"></i>'),
             'priority' => 3,
             'active' => false,
@@ -85,7 +88,7 @@ class class_post_meta_pricingtable{
                     $data_visible = isset($tab['data_visible']) ? $tab['data_visible'] : '';
                     $hidden = isset($tab['hidden']) ? $tab['hidden'] : false;
                     ?>
-                    <li <?php if(!empty($data_visible)):  ?> data_visible="<?php echo $data_visible; ?>" <?php endif; ?> class="tab-nav <?php if($hidden) echo 'hidden';?> <?php if($active) echo 'active';?>" data-id="<?php echo $id; ?>"><?php echo $title; ?></li>
+                    <li <?php if(!empty($data_visible)):  ?> data_visible="<?php echo esc_attr($data_visible); ?>" <?php endif; ?> class="tab-nav <?php if($hidden) echo 'hidden';?> <?php if($active) echo 'active';?>" data-id="<?php echo esc_attr($id); ?>"><?php echo esc_html($title); ?></li>
                     <?php
                 }
                 ?>
@@ -97,7 +100,7 @@ class class_post_meta_pricingtable{
                 $active = $tab['active'];
                 ?>
 
-                <div class="tab-content <?php if($active) echo 'active';?>" id="<?php echo $id; ?>">
+                <div class="tab-content <?php if($active) echo 'active';?>" id="<?php echo esc_attr($id); ?>">
                     <?php
                     do_action('pricingtable_metabox_content_'.$id, $post_id);
                     ?>
@@ -112,7 +115,7 @@ class class_post_meta_pricingtable{
 
             <h3>Pricing Table - Preview</h3>
 
-            <?php echo do_shortcode("[pricingtable_pickplugins id='".$post_id."']"); ?>
+            <?php echo do_shortcode("[pricingtable_pickplugins id='".esc_attr($post_id)."']"); ?>
         </div>
 
         <?php

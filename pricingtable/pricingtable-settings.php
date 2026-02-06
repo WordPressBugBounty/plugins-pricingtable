@@ -26,7 +26,7 @@ if ( ! defined('ABSPATH')) exit;  // if direct access
 
 
 			?>
-			<div class="updated"><p><strong><?php _e('Changes Saved.' ); ?></strong></p></div>
+			<div class="updated"><p><strong><?php echo esc_html__('Changes Saved.', 'pricingtable' ); ?></strong></p></div>
 
 			<?php
 		} 
@@ -46,8 +46,8 @@ if ( ! defined('ABSPATH')) exit;  // if direct access
 
 <div class="wrap">
 
-	<div id="icon-tools" class="icon32"><br></div><?php echo "<h2>".__(pricingtable_plugin_name.' Settings')."</h2>";?>
-		<form  method="post" action="<?php echo str_replace( '%7E', '~', esc_url_raw($_SERVER['REQUEST_URI'])); ?>">
+	<div id="icon-tools" class="icon32"><br></div><?php echo "<h2>".esc_html__('Pricing Table Settings', 'pricingtable')."</h2>";?>
+		<form  method="post" action="<?php echo esc_url(str_replace( '%7E', '~', $_SERVER['REQUEST_URI'])); ?>">
 	<input type="hidden" name="pricingtable_hidden" value="Y">
         <?php settings_fields( 'pricingtable_plugin_options' );
 				do_settings_sections( 'pricingtable_plugin_options' );

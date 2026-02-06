@@ -1,10 +1,10 @@
-=== Pricing Table by PickPlugins ===
+=== PickPlugins Pricing Table ===
 	Contributors: PickPlugins
 	Donate link: https://www.pickplugins.com/item/pricing-table/?ref=wordpress.org
-	Tags:  free pricing table, price table, pricing table, pricing table plugin, pricing tables, wordpress pricing table, pricing, pricing plugin, pricing grid, price grid
+	Tags:  pricing table, price table, pricing table, pricing table plugin
 	Requires at least: 3.8
-	Tested up to: 6.7
-	Stable tag: 1.12.10
+	Tested up to: 6.9
+	Stable tag: 1.12.12
 	License: GPLv2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,13 +33,12 @@ Could be possible to generate hosting style pricing table grid, flat grid, hide 
 * Display YouTube, vimeo video on each column.
 * Easy to use anywhere via short-codes.
 * Header description text.
-* Price Description text.
+* Price description text.
 * Display image for each column.
-* Column Header background color.
-* Column Price background color.
-* Column Price background color.
+* Column header background color.
+* Column price background color.
 * Unlimited ribbons.
-* Featured Column.
+* Featured column.
 * Slider on mobile.
 * Tool-tip text anywhere.
 * Background Image for table area.
@@ -56,31 +55,31 @@ Could be possible to generate hosting style pricing table grid, flat grid, hide 
 == Installation ==
 
 1. Install as regular WordPress plugin.
-2. Go your plugin setting via WordPress Dashboard and find "<strong>PricingTable</strong>" activate it.
+2. Go your plugin setting via WordPress Dashboard and find "PricingTable" activate it.
 
 After activate plugin you will see "PricingTable" menu at left side on wordpress dashboard click "New PricingTable" and fill the options field "Pricing Table Options"
 
-<strong>How to use on page or post</strong>
+How to use on page or post
 When pricing table data and options setup done please publish pricingtable as like post or page
 
-and then copy shortcode from top of <strong>Pricing Table Options</strong> `[pricingtable  id="123" ]`
+and then copy shortcode from top of Pricing Table Options `[pricingtable  id="123" ]`
 
 then paste this shortcode anywhere in your page to display pricing table
 
-<strong>How to display image or video on column</strong>
+How to display image or video on column
 
 You can display column image, or video,
 
-simplay to display image insert image url, filetype: .png, .gif, .jpg
+simply to display image insert image url, filetype: .png, .gif, .jpg
 
 PricingTable support youtube.com and vimeo.com video
 
-to display videos on column simplay insert video url as following:
+to display videos on column simply insert video url as following:
 
-<strong>for youtube:</strong>
+for youtube:
 `https://www.youtube.com/watch?v=PPLr-3viHOw`
 
-<strong>for vimeo:</strong>
+for vimeo:
 `http://vimeo.com/98571984`
 
 
@@ -112,6 +111,10 @@ to display videos on column simplay insert video url as following:
 
 
 == Changelog ==
+
+
+	= 1.12.11 =
+    * 2025-12-28 - fix - escaped issue fixed
 
 	= 1.12.10 =
     * 2025-2-18 - fix - escaped issue fixed

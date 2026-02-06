@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Pricing Table by PickPlugins
+Plugin Name: PickPlugins Pricing Table
 Plugin URI: https://www.pickplugins.com/item/pricing-table/?ref=dashboard
 Description: Long waited pricing table plugin for WordPress published to display pricing grid on your WordPress site.
-Version: 1.12.10
-Author: pickplugins
+Version: 1.12.12
+Author: PickPlugins
 Author URI: http://pickplugins.com/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -25,7 +25,7 @@ if (!class_exists('PricingTablePickplugins')) {
 
             define('pricingtable_pro_url', 'https://www.pickplugins.com/item/pricing-table/?ref=dashboard');
             define('pricingtable_plugin_name', 'Pricing Table');
-            define('pricingtable_version', '1.12.10');
+            define('pricingtable_version', '1.12.12');
 
             //require_once( pricingtable_plugin_dir . 'includes/meta.php');
             require_once(pricingtable_plugin_dir . 'includes/functions.php');

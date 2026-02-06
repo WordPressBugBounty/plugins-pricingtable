@@ -27,7 +27,7 @@ if(current_user_can('manage_options')):
             if(wp_verify_nonce( $nonce, 'pricingtable_license' ) && $_POST['pricingtable_hidden'] == 'Y') {
 
                 ?>
-                <div class="updated"><p><strong><?php _e('Changes Saved.', 'pricingtable' ); ?></strong></p></div>
+                <div class="updated"><p><strong><?php echo esc_html__('Changes Saved.', 'pricingtable' ); ?></strong></p></div>
 
                 <?php
                 }
@@ -43,8 +43,8 @@ if(current_user_can('manage_options')):
 
     <div class="wrap">
 
-        <div id="icon-tools" class="icon32"><br></div><?php echo "<h2>".__(pricingtable_plugin_name.' Migrate', 'pricingtable')."</h2>";?>
-            <form  method="post" action="<?php echo str_replace( '%7E', '~', esc_url_raw($_SERVER['REQUEST_URI'])); ?>">
+        <div id="icon-tools" class="icon32"><br></div><?php echo "<h2>".esc_html__('Pricing Table Migrate', 'pricingtable')."</h2>";?>
+            <form  method="post" action="<?php echo esc_url(str_replace( '%7E', '~', $_SERVER['REQUEST_URI'])); ?>">
         <input type="hidden" name="pricingtable_hidden" value="Y">
             <?php //settings_fields( 'pricingtable_plugin_options' );
                     //do_settings_sections( 'pricingtable_plugin_options' );
@@ -155,7 +155,7 @@ if(current_user_can('manage_options')):
                                 ?>
                                 <div class="">
                                     <?php
-                                    echo '<i class="fa fa-check"></i> '.get_the_title();
+                                    echo '<i class="fa fa-check"></i> '.esc_html(get_the_title());
 
 
                                     ?>

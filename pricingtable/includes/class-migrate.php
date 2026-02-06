@@ -19,7 +19,7 @@ class class_pricingtable_migrate{
 
 			?>
 			<div class="update-nag">
-				Data update required for PricingTable <a href="<?php echo $admin_url; ?>edit.php?post_type=pricingtable&page=pricingtable_migrate"><b>Click here</b></a>
+				Data update required for PricingTable <a href="<?php echo esc_url($admin_url.'edit.php?post_type=pricingtable&page=pricingtable_migrate'); ?>"><b>Click here</b></a>
 			</div>
 			<?php
 
